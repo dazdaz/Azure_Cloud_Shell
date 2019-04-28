@@ -34,7 +34,5 @@ ssh -o ServerAliveInterval=60 -R 18080:localhost:9000 serveo.net
 # Open up port 9000 via Azure portal
 
 # From laptop
-ssh-keygen -t dsa -C "Firstname Lastname Dropbear" -t rsa -b 4048
-copy ~/.ssh/id_rsa.pub to azurecloudshell:/~/.ssh/authorized_keys
 ssh -l <myusername> serveo.net -p 18080
 ```
