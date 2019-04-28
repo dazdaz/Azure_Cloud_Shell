@@ -24,7 +24,7 @@ ssh -R 80:localhost:9000 serveo.net
 ssh-keygen -t dsa -C "Firstname Lastname Dropbear" -t rsa -b 4048
 copy ~/.ssh/id_rsa.pub to azurecloudshell:/~/.ssh/authorized_keys
 
-# Azure Cloud Shell
+# From Azure Cloud Shell
 wget https://matt.ucc.asn.au/dropbear/releases/dropbear-2019.78.tar.bz2
 tar xvjf dropbear-2019.78.tar.bz2 && cd dropbear-2019.78
 ./configure --enable-static && make
