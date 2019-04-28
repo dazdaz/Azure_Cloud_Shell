@@ -1,4 +1,5 @@
-# Azure_Cloud_Shell
+# Azure_Cloud_Shell - Opening a port
+* https://docs.microsoft.com/en-ca/azure/cloud-shell/using-the-shell-window#web-preview
 
 #### Recipe to download files quickly from Azure Cloud Shell using Python3 - Warning : no authentication
 ```
