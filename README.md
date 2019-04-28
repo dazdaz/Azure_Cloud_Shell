@@ -31,7 +31,7 @@ tar xvjf dropbear-2019.78.tar.bz2 && cd dropbear-2019.78
 ./dropbearkey -t rsa -f dropbear_rsa_host_key
 ./dropbear -r ./dropbear_rsa_host_key -p 9000
 ssh -o ServerAliveInterval=60 -R 18080:localhost:9000 serveo.net
-# open up port 9000 via Azure portal
+# Open up port 9000 via Azure portal
 
 # From laptop
 ssh-keygen -t dsa -C "Firstname Lastname Dropbear" -t rsa -b 4048
