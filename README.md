@@ -17,3 +17,22 @@ ssh -R 80:localhost:9000 serveo.net
 # Open up port 9000 in portal
 # Point browser to -> https://abcdef.serveo.net
 ```
+
+#### Recipe to run portable ssh server (dropbear) in Azure Shell
+```
+# From laptop
+ssh-keygen -t dsa -C "Firstname Lastname Dropbear" -t rsa -b 4048
+copy ~/.ssh/id_rsa.pub to azurecloudshell:/~/.ssh/authorized_keys
+
+# Azure Cloud Shell
+./configure --enable-static && make
+./dropbearkey -t rsa -f dropbear_rsa_host_key
+./dropbear -r ./dropbear_rsa_host_key -p 9000
+ssh -o ServerAliveInterval=60 -R 18080:localhost:9000 serveo.net
+# open up port 9000 via Azure portal
+
+# From laptop
+ssh-keygen -t dsa -C "Firstname Lastname Dropbear" -t rsa -b 4048
+copy ~/.ssh/id_rsa.pub to azurecloudshell:/~/.ssh/authorized_keys
+ssh -l <myusername> serveo.net -p 18080
+```
