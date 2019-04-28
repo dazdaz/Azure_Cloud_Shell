@@ -21,7 +21,7 @@ ssh -R 80:localhost:9000 serveo.net
 #### Recipe to run portable ssh server (dropbear) in Azure Shell
 ```
 # From laptop
-ssh-keygen -t dsa -C "Firstname Lastname Dropbear" -t rsa -b 4048
+ssh-keygen -t dsa -C "Firstname Lastname Dropbear" -t rsa -b 4096
 copy ~/.ssh/id_rsa.pub to azurecloudshell:/~/.ssh/authorized_keys
 
 # From Azure Cloud Shell
