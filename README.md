@@ -26,7 +26,7 @@ copy ~/.ssh/id_rsa.pub to azurecloudshell:/~/.ssh/authorized_keys
 
 # Azure Cloud Shell
 wget https://matt.ucc.asn.au/dropbear/releases/dropbear-2019.78.tar.bz2
-tar xvzf dropbear-2019.78.tar.bz2 && cd dropbear-2019.78
+tar xvjf dropbear-2019.78.tar.bz2 && cd dropbear-2019.78
 ./configure --enable-static && make
 ./dropbearkey -t rsa -f dropbear_rsa_host_key
 ./dropbear -r ./dropbear_rsa_host_key -p 9000
